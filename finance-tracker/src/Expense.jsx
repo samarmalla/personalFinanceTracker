@@ -14,21 +14,19 @@ function Expense({ onAddExpense }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: 20 }}>
+    <form onSubmit={handleSubmit} className="input-form expense-form">
       <h4>Add Expense</h4>
       <input
         type="text"
         placeholder="Description"
         value={desc}
         onChange={e => setDesc(e.target.value)}
-        style={{ marginRight: 8 }}
       />
       <input
         type="number"
         placeholder="Amount"
         value={amount}
         onChange={e => setAmount(e.target.value)}
-        style={{ marginRight: 8 }}
       />
       <button type="submit">Add Expense</button>
     </form>

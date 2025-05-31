@@ -14,21 +14,19 @@ function Income({ onAddIncome }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: 20 }}>
+    <form onSubmit={handleSubmit} className="input-form income-form">
       <h4>Add Income</h4>
       <input
         type="text"
         placeholder="Description"
         value={desc}
         onChange={e => setDesc(e.target.value)}
-        style={{ marginRight: 8 }}
       />
       <input
         type="number"
         placeholder="Amount"
         value={amount}
         onChange={e => setAmount(e.target.value)}
-        style={{ marginRight: 8 }}
       />
       <button type="submit">Add Income</button>
     </form>

@@ -12,27 +12,23 @@ function Savings({ onSetSavings, savingsGoal, progress }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="input-form savings-form">
       <h4>Savings Goal</h4>
       <input
         type="number"
         placeholder="Set your savings goal"
         value={goal}
         onChange={e => setGoal(e.target.value)}
-        style={{ marginRight: 8 }}
       />
       <button type="submit">Set Goal</button>
       {savingsGoal > 0 && (
         <div style={{ marginTop: 10 }}>
           <strong>Goal: ${savingsGoal}</strong>
-          <div style={{ background: '#eee', height: 20, width: 200, marginTop: 5 }}>
-            <div style={{
-              background: 'green',
-              width: `${progress}%`,
-              height: '100%',
-              color: 'white',
-              textAlign: 'center'
-            }}>
+          <div className="savings-bar-bg">
+            <div
+              className="savings-bar-fill"
+              style={{ width: `${progress}%` }}
+            >
               {progress.toFixed(0)}%
             </div>
           </div>
